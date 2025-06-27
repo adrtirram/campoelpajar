@@ -3,488 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Casa Rural con Piscina</title>
-  <!-- Bootstrap CSS -->
+  
+  <!-- SEO - Título y Descripción -->
+  <title>Casa Rural con Piscina en Barbate, Cádiz | Tu Escapada Perfecta</title>
+  <meta name="description" content="Disfruta de una casa rural exclusiva con piscina privada cerca de las playas de Barbate y Caños de Meca, Cádiz. Ideal para 6 personas. ¡Reserva tu escapada!">
+  <meta name="keywords" content="casa rural cádiz, alquiler vacacional barbate, casa con piscina privada, turismo rural andalucía, playas de cádiz, los caños de meca, la breña">
+  <link rel="canonical" href="https://adrtirram.github.io/campoelpajar">
+  <meta name="robots" content="index, follow">
+
+  <!-- SEO - Open Graph (para Facebook, WhatsApp, etc.) -->
+  <meta property="og:title" content="Casa Rural con Piscina Privada en Barbate, Cádiz">
+  <meta property="og:description" content="Descubre nuestro refugio rural con piscina exclusiva, ideal para una escapada inolvidable en la costa de Cádiz.">
+  <meta property="og:image" content="https://adrtirram.github.io/campoelpajar/img/imgCampo1.jpg">
+  <meta property="og:url" content="https://adrtirram.github.io/campoelpajar">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Casa Rural en Barbate">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- SEO - Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Casa Rural con Piscina Privada en Barbate, Cádiz">
+  <meta name="twitter:description" content="Descubre nuestro refugio rural con piscina exclusiva, ideal para una escapada inolvidable en la costa de Cádiz.">
+  <meta name="twitter:image" content="https://adrtirram.github.io/campoelpajar/img/imgCampo1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary-green: #28a745;
-      --primary-blue: #17a2b8;
-      --light-green: #d4edda;
-      --light-blue: #d1ecf1;
-      --gradient-bg: linear-gradient(135deg, #17a2b8 0%, #28a745 100%);
-    }
-    body {
-      background: #f8f9fa;
-    }
-    .hero {
-      background: var(--gradient-bg);
-      color: #fff;
-      padding: 100px 0 60px 0;
-      text-align: center;
-    }
-    .btn-hero {
-      background: var(--primary-green);
-      border: none;
-      padding: 15px 35px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s;
-      box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-    }
-    .btn-hero:hover {
-      background: #218838;
-      transform: translateY(-3px);
-    }
-    .carousel-center-container {
-      width: 80%;
-      margin: 3rem auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .carousel {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-      background: var(--light-blue);
-    }
-    .carousel-item img {
-      object-fit: cover;
-      height: 400px;
-      width: 100%;
-      border-radius: 20px;
-    }
-    .carousel-control-prev, .carousel-control-next {
-      width: 60px;
-      height: 60px;
-      background: var(--gradient-bg);
-      border-radius: 50%;
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 0.95;
-      border: 3px solid #fff;
-      transition: all 0.3s;
-    }
-    .carousel-control-prev { left: 20px; }
-    .carousel-control-next { right: 20px; }
-    .carousel-control-prev:hover, .carousel-control-next:hover {
-      opacity: 1;
-      transform: translateY(-50%) scale(1.08);
-      box-shadow: 0 8px 25px rgba(40, 167, 69, 0.2);
-    }
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-      width: 28px;
-      height: 28px;
-      filter: brightness(0) invert(1);
-    }
-    .carousel-indicators [data-bs-target] {
-      width: 40px;
-      height: 4px;
-      border-radius: 2px;
-      background-color: rgba(40,167,69,0.4);
-      border: none;
-      margin: 0 4px;
-      transition: all 0.3s;
-    }
-    .carousel-indicators .active {
-      background-color: var(--primary-green);
-      transform: scale(1.2);
-    }
-    .features-section {
-      background: var(--light-green);
-      padding: 4rem 0;
-    }
-    .feature-card {
-      background: white;
-      padding: 2.5rem 1.5rem;
-      border-radius: 20px;
-      text-align: center;
-      border: 1px solid rgba(40, 167, 69, 0.08);
-      box-shadow: 0 8px 24px rgba(23, 162, 184, 0.05);
-      height: 100%;
-    }
-    .feature-card i {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: var(--primary-blue);
-    }
-    .feature-card h3 {
-      color: var(--primary-green);
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    .contact-section {
-      background: var(--light-blue);
-      padding: 4rem 0;
-      text-align: center;
-    }
-    .btn-contact {
-      background: var(--gradient-bg);
-      border: none;
-      padding: 15px 35px;
-      font-weight: 600;
-      border-radius: 50px;
-      color: #fff;
-      font-size: 1.1rem;
-      transition: all 0.3s;
-    }
-    .btn-contact:hover {
-      background: #218838;
-      color: #fff;
-      box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15);
-      transform: translateY(-2px);
-    }
-    .map-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: var(--primary-blue);
-      text-decoration: none;
-    }
-    .map-link:hover {
-      text-decoration: underline;
-    }
-    .info-text {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 1.1rem;
-      color: #555;
-    }
-    .map-iframe {
-      width: 100%;
-      height: 350px;
-      border: 0;
-      border-radius: 12px;
-      margin: 1rem 0;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-    /* Igualar altura de carruseles e iframes */
-    .equal-height {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .carousel-container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .carousel {
-      flex: 1;
-    }
-    @media (max-width: 992px) {
-      .carousel-center-container { width: 95%; }
-      .carousel-item img { height: 240px; }
-    }
-    @media (max-width: 768px) {
-      .carousel-center-container { width: 100%; }
-      .feature-card { padding: 1.5rem 1rem; }
-      .map-iframe { height: 250px; }
-    }
-    .section-title-margin {
-      margin-bottom: 3rem !important;
-      margin-top: 2rem !important;
-    }
-    @media (max-width: 991.98px) {
-      .row.mb-5 > .col-md-6 {
-        margin-bottom: 2rem !important;
-      }
-    }
-    @media (max-width: 767.98px) {
-      .carousel-center-container {
-        width: 100%;
-        margin: 1.5rem 0;
-      }
-      .features-section {
-        padding: 2rem 0;
-      }
-      .feature-card {
-        padding: 1.2rem 0.7rem;
-        margin-bottom: 1.5rem;
-      }
-      .info-text {
-        font-size: 1rem;
-        margin-top: 1rem;
-      }
-      .carousel-item img {
-        height: 180px;
-      }
-      .map-iframe {
-        height: 180px;
-      }
-      .section-title-margin {
-        margin-bottom: 1.5rem !important;
-        margin-top: 1rem !important;
-      }
-    }
-    .align-carousel-text {
-      margin-bottom: 1.25rem !important; /* Ajusta este valor para igualar la separación visual */
-    }
-    .map-iframe-spacing {
-      margin-top: 1.5rem !important;
-      margin-bottom: 0.5rem !important;
-    }
-    .no-margin-map {
-      margin: 0 !important;
-    }
-  </style>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="display-4 fw-bold">Casa Rural con Piscina</h1>
-      <p class="lead mb-4">Descubre la tranquilidad de una vivienda rural con piscina privada y todas las comodidades en un entorno natural único.</p>
-      <a href="#contacto" class="btn btn-hero">
-        <i class="bi bi-calendar2-check me-2"></i>Reserva tu escapada
-      </a>
+  <header class="hero">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">Tu Refugio Privado en la Naturaleza</h1>
+      <p class="lead mb-4">Descubre la serenidad de una exclusiva casa rural con piscina, donde cada detalle está pensado para tu confort y relajación.</p>
+      <a href="#contacto" class="btn btn-hero"><i class="bi bi-calendar2-check me-2"></i>Reserva Tu Estancia</a>
     </div>
-  </section>
+  </header>
 
-  <!-- Playas Cercanas -->
-  <section class="container my-5">
-    <h2 class="mb-4 text-center section-title-margin">Playas Cercanas</h2>
-    <div class="row mb-5">
-      <div class="col-md-6 mb-4 equal-height">
-        <h4>Playa del Carmen y Yerbabuena (Barbate, Cádiz, España)</h4>
-        <p class="align-carousel-text">Disfruta de la famosa Playa del Carmen, la playa urbana más accesible de Barbate, y la salvaje Yerbabuena, ideales para el baño, el surf y largos paseos junto al Parque Natural de la Breña.</p>
-        <div class="carousel-container">
-          <div id="carouselPlayaBarbate" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselPlayaBarbate" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselPlayaBarbate" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Playa del Carmen Barbate">
+  <main>
+    <section class="container my-5">
+      <h2 class="text-center section-title">Explora Playas Paradisíacas</h2>
+      <div class="row">
+        <!-- Playa del Carmen y Hierbabuena -->
+        <div class="col-lg-6 mb-5">
+          <div class="card location-card h-100">
+            <div id="carouselPlayaBarbate" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active"><img src="./img/imgCarmen1.webp" class="d-block w-100 gallery-img" alt="Vista aérea de la Playa del Carmen en Barbate" data-gallery="barbate"></div>
+                <div class="carousel-item"><img src="./img/imgCarmen2.webp" class="d-block w-100 gallery-img" alt="Arena dorada y barcas en la Playa del Carmen" data-gallery="barbate"></div>
+                <div class="carousel-item"><img src="./img/imgCarmen3.webp" class="d-block w-100 gallery-img" alt="Paseo marítimo de Barbate" data-gallery="barbate"></div>
+                <div class="carousel-item"><img src="./img/imgHierba1.webp" class="d-block w-100 gallery-img" alt="Playa virgen de la Hierbabuena" data-gallery="barbate"></div>
+                <div class="carousel-item"><img src="./img/imgHierba2.webp" class="d-block w-100 gallery-img" alt="Dunas y vegetación en la Hierbabuena" data-gallery="barbate"></div>
               </div>
-              <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Playa Yerbabuena Barbate">
-              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPlayaBarbate" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPlayaBarbate" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPlayaBarbate" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselPlayaBarbate" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title">Playa del Carmen y Hierbabuena</h4>
+              <p class="card-text flex-grow-1">Sumérgete en la vibrante Playa del Carmen de Barbate o aventúrate en la virgen Hierbabuena, un paraíso para surfistas y amantes de la naturaleza.</p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6440.513756858276!2d-5.929827822998782!3d36.18463990264058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c436b81c6b95d%3A0x9711771988e6cd1!2sPlaya%20del%20Carmen!5e0!3m2!1ses!2ses!4v1672853958581" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la Playa del Carmen"></iframe>
+              <a href="https://www.google.com/maps/place/Playa+del+Carmen/@36.18464,-5.927252,15z" class="map-link" target="_blank"><i class="bi bi-geo-alt-fill me-2"></i>Ver en Google Maps</a>
+            </div>
           </div>
         </div>
-        <iframe class="map-iframe map-iframe-spacing" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12881.025120884127!2d-5.92237040669078!3d36.18464859918406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c436b81c6b95d%3A0x9711771988e6cd1!2sPlaya%20del%20Carmen!5e0!3m2!1ses!2ses!4v1750853958581!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <a href="https://www.google.com/maps/place/Playa+del+Carmen/@36.1848246,-5.9275087,14z/data=!3m1!4b1!4m6!3m5!1s0xd0d6c1f5c7f7e27:0x7d7c6a7c3c6e6e7d!8m2!3d36.1848246!4d-5.9275087!16s%2Fg%2F11b8z8m0c6" class="map-link" target="_blank">
-          Ver en Google Maps
-        </a>
-      </div>
-      <div class="col-md-6 mb-4 equal-height">
-        <h4>Los Caños de Meca y La Breña</h4>
-        <p class="align-carousel-text">Explora Los Caños de Meca, con sus aguas cristalinas y ambiente relajado, y el entorno natural del Parque de La Breña, perfecto para rutas y miradores.</p>
-        <div class="carousel-container mt-4">
-          <div id="carouselCanosBrena" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselCanosBrena" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselCanosBrena" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Los Caños de Meca">
+        <!-- Los Caños de Meca y La Breña -->
+        <div class="col-lg-6 mb-5">
+          <div class="card location-card h-100">
+            <div id="carouselCanosMeca" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active"><img src="./img/imgCanios1.webp" class="d-block w-100 gallery-img" alt="Playa de Los Caños de Meca" data-gallery="canos"></div>
+                <div class="carousel-item"><img src="./img/imgCanios2.webp" class="d-block w-100 gallery-img" alt="Aguas cristalinas en Los Caños de Meca" data-gallery="canos"></div>
+                <div class="carousel-item"><img src="./img/imgCanios3.webp" class="d-block w-100 gallery-img" alt="Ambiente relajado en la playa de Los Caños" data-gallery="canos"></div>
+                <div class="carousel-item"><img src="./img/imgCanios4.webp" class="d-block w-100 gallery-img" alt="Atardecer en Los Caños de Meca" data-gallery="canos"></div>
+                <div class="carousel-item"><img src="./img/imgBrenia1.webp" class="d-block w-100 gallery-img" alt="Acantilados del Parque Natural de La Breña" data-gallery="canos"></div>
+                <div class="carousel-item"><img src="./img/imgBrenia2.webp" class="d-block w-100 gallery-img" alt="Senderos en La Breña" data-gallery="canos"></div>
+                <div class="carousel-item"><img src="./img/imgBrenia3.webp" class="d-block w-100 gallery-img" alt="Pinos sobre el mar en La Breña" data-gallery="canos"></div>
+                <div class="carousel-item"><img src="./img/imgBrenia4.webp" class="d-block w-100 gallery-img" alt="Vistas desde el acantilado de La Breña" data-gallery="canos"></div>
               </div>
-              <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Parque de La Breña">
-              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselCanosMeca" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselCanosMeca" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCanosBrena" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselCanosBrena" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title">Los Caños de Meca y La Breña</h4>
+              <p class="card-text flex-grow-1">Déjate seducir por las aguas cristalinas y el ambiente bohemio de Los Caños de Meca, rodeado por el impresionante Parque Natural de La Breña.</p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12857.29173256608!2d-6.023260940332031!3d36.182286700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d55b0a3f746bf%3A0x8ddce19183344655!2sLos%20Ca%C3%B1os%20de%20Meca!5e0!3m2!1ses!2ses!4v1672854100000" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Los Caños de Meca"></iframe>
+              <a href="https://www.google.com/maps/place/Los+Ca%C3%B1os+de+Meca" class="map-link" target="_blank"><i class="bi bi-geo-alt-fill me-2"></i>Ver en Google Maps</a>
+            </div>
           </div>
         </div>
-        <iframe class="map-iframe map-iframe-spacing" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.343357124891!2d-6.0462633!3d36.1853816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d55c5c8c9c9c5%3A0x7d7c6a7c3c6e6e7d!2sLos%20Ca%C3%B1os%20de%20Meca!5e0!3m2!1ses!2ses!4v1719330000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <a href="https://www.google.com/maps/place/Los+Ca%C3%B1os+de+Meca/@36.1853816,-6.0462633,13z/data=!3m1!4b1!4m6!3m5!1s0xd0d55c5c8c9c9c5:0x7d7c6a7c3c6e6e7d!8m2!3d36.1853816!4d-6.0462633!16s%2Fm%2F02plv2_" class="map-link" target="_blank">
-          Ver en Google Maps
-        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Carrusel del campo -->
-  <div class="carousel-center-container">
-    <div id="carruselCasaRural" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="5" aria-label="Slide 6"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="6" aria-label="Slide 7"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="7" aria-label="Slide 8"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="8" aria-label="Slide 9"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="9" aria-label="Slide 10"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="10" aria-label="Slide 11"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="11" aria-label="Slide 12"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="12" aria-label="Slide 13"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="13" aria-label="Slide 14"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="14" aria-label="Slide 15"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="15" aria-label="Slide 16"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="16" aria-label="Slide 17"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="17" aria-label="Slide 18"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="18" aria-label="Slide 19"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="19" aria-label="Slide 20"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="20" aria-label="Slide 21"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="21" aria-label="Slide 22"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="22" aria-label="Slide 23"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="23" aria-label="Slide 24"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="24" aria-label="Slide 25"></button>
-        <button type="button" data-bs-target="#carruselCasaRural" data-bs-slide-to="25" aria-label="Slide 26"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./imgCampo1.jpg" class="d-block w-100" alt="Vista exterior">
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="text-center section-title text-white">Un Vistazo a Tu Escapada</h2>
+        <div id="carruselCasaRural" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="./img/imgCampo1.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Fachada de la casa rural con jardín"></div>
+            <div class="carousel-item"><img src="./img/imgCampo2.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Salón comedor con chimenea"></div>
+            <div class="carousel-item"><img src="./img/imgCampo3.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Jardín cuidado con césped y árboles"></div>
+            <div class="carousel-item"><img src="./img/imgCampo4.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Piscina privada con tumbonas"></div>
+            <div class="carousel-item"><img src="./img/imgCampo5.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Interior del salón con decoración rústica"></div>
+            <div class="carousel-item"><img src="./img/imgCampo6.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Habitación doble luminosa y acogedora"></div>
+            <div class="carousel-item"><img src="./img/imgCampo7.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Cocina completamente equipada"></div>
+            <div class="carousel-item"><img src="./img/imgCampo8.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Porche exterior con mesa y sillas"></div>
+            <div class="carousel-item"><img src="./img/imgCampo9.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Barbacoa de obra en el jardín"></div>
+            <div class="carousel-item"><img src="./img/imgCampo10.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Piscina iluminada de noche"></div>
+            <div class="carousel-item"><img src="./img/imgCampo11.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Dormitorio con cama de matrimonio"></div>
+            <div class="carousel-item"><img src="./img/imgCampo12.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Detalle decorativo del interior"></div>
+            <div class="carousel-item"><img src="./img/imgCampo13.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Baño completo con ducha"></div>
+            <div class="carousel-item"><img src="./img/imgCampo14.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Zona de estar exterior en el porche"></div>
+            <div class="carousel-item"><img src="./img/imgCampo15.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Vista lateral de la casa y el jardín"></div>
+            <div class="carousel-item"><img src="./img/imgCampo16.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Otra perspectiva del salón"></div>
+            <div class="carousel-item"><img src="./img/imgCampo17.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Dormitorio con dos camas individuales"></div>
+            <div class="carousel-item"><img src="./img/imgCampo18.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Entrada a la propiedad"></div>
+            <div class="carousel-item"><img src="./img/imgCampo19.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Mesa de comedor para seis personas"></div>
+            <div class="carousel-item"><img src="./img/imgCampo20.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Atardecer desde el jardín"></div>
+            <div class="carousel-item"><img src="./img/imgCampo21.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Detalle de la vegetación del jardín"></div>
+            <div class="carousel-item"><img src="./img/imgCampo22.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Vista completa de la zona de la piscina"></div>
+            <div class="carousel-item"><img src="./img/imgCampo23.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Sofá y zona de televisión"></div>
+            <div class="carousel-item"><img src="./img/imgCampo24.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Armario en uno de los dormitorios"></div>
+            <div class="carousel-item"><img src="./img/imgCampo25.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Vistas del campo desde la casa"></div>
+            <div class="carousel-item"><img src="./img/imgCampo26.jpg" class="d-block w-100 gallery-img" data-gallery="casa" alt="Casa iluminada al anochecer"></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselCasaRural" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselCasaRural" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
         </div>
-        <div class="carousel-item">
-          <img src="./imgCampo2.jpg" class="d-block w-100" alt="Vista interior">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo3.jpg" class="d-block w-100" alt="Jardín">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo4.jpg" class="d-block w-100" alt="Piscina">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo5.jpg" class="d-block w-100" alt="Salón rural">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo6.jpg" class="d-block w-100" alt="Habitación">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo7.jpg" class="d-block w-100" alt="Cocina equipada">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo8.jpg" class="d-block w-100" alt="Terraza">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo9.jpg" class="d-block w-100" alt="Zona de barbacoa">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo10.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo11.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo12.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo13.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo14.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo15.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo16.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo17.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo18.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo19.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo20.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo21.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo22.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo23.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo24.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo25.jpg" class="d-block w-100" alt="Vista nocturna">
-        </div>
-        <div class="carousel-item">
-          <img src="./imgCampo26.jpg" class="d-block w-100" alt="Vista nocturna">
+        <div class="info-text">
+          <p>Con capacidad para 6 personas, nuestra casa es el lugar ideal para familias o grupos de amigos que buscan una experiencia inolvidable de confort y naturaleza.</p>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carruselCasaRural" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carruselCasaRural" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
+    </section>
+
+    <section class="features-section">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-house-heart-fill"></i><h3>Hogar y Confort</h3><p>Un ambiente cálido y acogedor, equipado con todo lo necesario para que te sientas como en casa.</p></div></div>
+          <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-water"></i><h3>Piscina Privada</h3><p>Disfruta de un oasis de tranquilidad. Nuestra piscina es exclusiva para ti y tus acompañantes.</p></div></div>
+          <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-compass-fill"></i><h3>Entorno Único</h3><p>Ubicada cerca de playas y rutas de senderismo, la aventura y el relax están a tu alcance.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="contact-section">
+    <div class="container text-center">
+      <h2 class="mb-4">¿Listo para Desconectar?</h2>
+      <p class="lead mb-4">Contáctanos para consultar disponibilidad y precios. <br>Estaremos encantados de ayudarte a planificar tu escapada perfecta.</p>
+      <a href="https://www.facebook.com/profile.php?id=100007027907306" class="btn btn-contact" target="_blank" rel="noopener noreferrer"><i class="bi bi-messenger me-2"></i>Contactar por Messenger</a>
+    </div>
+  </footer>
+
+  <div id="lightbox-overlay">
+    <button class="lightbox-close">×</button>
+    <button class="lightbox-prev">❮</button>
+    <button class="lightbox-next">❯</button>
+    <div class="lightbox-content">
+      <img id="lightbox-image" src="" alt="Imagen ampliada de la galería">
     </div>
   </div>
 
-  <!-- Información adicional del campo -->
-  <section class="container mt-4">
-    <div class="info-text">
-      <p>La casa rural cuenta con capacidad máxima para 6 personas, ideal para grupos familiares o de amigos que buscan disfrutar de una escapada en plena naturaleza con todas las comodidades y servicios.</p>
-    </div>
-  </section>
-
-  <!-- Características -->
-  <section class="features-section">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <i class="bi bi-house-heart-fill"></i>
-            <h3>Ambiente Acogedor</h3>
-            <p>Casa rural con encanto, rodeada de naturaleza y equipada con todas las comodidades.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <i class="bi bi-water"></i>
-            <h3>Piscina Privada</h3>
-            <p>Piscina exclusiva solo para ti y tus acompañantes, perfecta para relajarte.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <i class="bi bi-geo-alt-fill"></i>
-            <h3>Ubicación Perfecta</h3>
-            <p>Cerca de rutas de senderismo y pueblos con encanto para disfrutar al máximo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="contact-section">
-    <div class="container">
-      <h2 class="mb-4">Contáctanos para más información</h2>
-      <a href="https://www.facebook.com/profile.php?id=100007027907306" class="btn btn-contact" target="_blank">
-        <i class="bi bi-messenger me-2"></i>Contactar por Messenger
-      </a>
-    </div>
-  </section>
-
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>

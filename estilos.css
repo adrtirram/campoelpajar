@@ -1,0 +1,228 @@
+/* --- Variables & Global Styles --- */
+:root {
+  --primary-color: #00796b;
+  --secondary-color: #ffc107;
+  --light-bg: #f8f9fa;
+  --dark-text: #333;
+  --light-text: #fff;
+  --gradient-bg: linear-gradient(135deg, #00796b 0%, #009688 100%);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --border-radius: 16px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+  background: var(--gradient-bg);
+  color: var(--light-text);
+  padding: 100px 0;
+}
+
+.btn-hero {
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+}
+
+.btn-hero:hover {
+  background-color: #ffca2c;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 193, 7, 0.4);
+}
+
+/* --- Playas Cercanas Section --- */
+.location-card {
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+}
+
+.location-card .carousel-inner img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.gallery-img {
+  cursor: pointer;
+}
+
+.location-card .card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.map-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  margin-top: auto;
+}
+
+.map-link:hover {
+  color: #004d40;
+  text-decoration: underline;
+}
+
+/* --- Galería de la Casa Section --- */
+.gallery-section {
+  background: var(--gradient-bg);
+  padding: 4rem 0;
+}
+
+#carruselCasaRural {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+#carruselCasaRural .carousel-item {
+  background-color: transparent;
+}
+
+/* La vista del carrusel usa 'cover' para rellenar el espacio */
+#carruselCasaRural .carousel-item img {
+  object-fit: cover;
+  height: 500px;
+  width: 100%;
+}
+
+.gallery-section .info-text {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--light-text);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Carousel Controls */
+.carousel-control-prev, .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.carousel-control-prev { left: 20px; }
+.carousel-control-next { right: 20px; }
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* --- Features Section --- */
+.features-section { padding: 4rem 0; background-color: #ffffff; }
+.feature-card { background: var(--light-bg); padding: 2.5rem 1.5rem; border-radius: var(--border-radius); text-align: center; border: 1px solid #e0e0e0; height: 100%; transition: all 0.3s ease; }
+.feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: var(--primary-color); }
+.feature-card i { font-size: 3rem; margin-bottom: 1rem; color: var(--primary-color); }
+.feature-card h3 { color: var(--dark-text); font-weight: 600; margin-bottom: 1rem; }
+
+/* --- Contacto Section --- */
+.contact-section { background-color: #e0f2f1; padding: 4rem 0; }
+.btn-contact { background: var(--primary-color); border: none; padding: 15px 35px; font-weight: 600; border-radius: 50px; color: var(--light-text); font-size: 1.2rem; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0, 121, 107, 0.25); }
+.btn-contact:hover { background: #004d40; color: var(--light-text); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 121, 107, 0.35); }
+
+/* --- Lightbox Styles --- */
+#lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* CAMBIO CLAVE: El marco fijo y centrado se ajusta al 95% */
+.lightbox-content {
+  position: relative;
+  /* Se define un tamaño fijo usando unidades de viewport */
+  width: 90vw;   /* <-- AJUSTADO AL 95% DEL ANCHO */
+  height: 90vh;  /* <-- AJUSTADO AL 95% DEL ALTO */
+  background: #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Los botones se posicionan de forma absoluta al overlay principal */
+.lightbox-close, .lightbox-prev, .lightbox-next {
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1051;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.lightbox-close { top: 15px; right: 25px; font-size: 3rem; }
+.lightbox-prev { left: 15px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 15px; top: 50%; transform: translateY(-50%); }
+
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover { color: var(--secondary-color); }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) { #carruselCasaRural .carousel-item img { height: 400px; } }
+
+@media (max-width: 768px) {
+  .hero { padding: 80px 0; }
+  .section-title { margin-bottom: 2rem; }
+  #carruselCasaRural .carousel-item img { height: 300px; }
+  .gallery-section .info-text { font-size: 1rem; }
+  .location-card .carousel-inner img { height: 200px; }
+  .map-iframe { height: 180px; }
+}
